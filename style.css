@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.nav-logo {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-right a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.nav-right a:hover {
+  opacity: 0.8;
+}
+
+.nav-right a.active {
+  border-bottom: 1px solid #fff;
+}
+
+.nav-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+  display: block;
+}
+
+/* DROPDOWN */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #222;
+  min-width: 140px;
+  padding: 8px 0;
+  z-index: 100;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: #333;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  background-color: #4a5568;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-home {
+  background-image: url('images/hero-home.jpg');
+}
+
+.hero-about {
+  background-image: url('images/hero-about.jpg');
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-bottom: 0;
+}
+
+.hero-training {
+  background-image: url('images/hero-training.jpg');
+  height: 55vh;
+}
+
+.hero-method {
+  background-image: url('images/hero-method.jpg');
+  background-position: 50% 15%;
+  height: 55vh;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.hero-content .page-title {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 40px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.section p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  padding: 80px 40px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+.about-section p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.about-section a {
+  display: block;
+  text-align: center;
+  margin-top: 32px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #888;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.about-section a:hover {
+  color: #333;
+}
+
+/* TRAINING SECTION */
+.training-section {
+  padding: 80px 40px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.training-section h2 {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 28px;
+  line-height: 1.3;
+}
+
+.training-section p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.training-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 8px;
+}
+
+.training-section ul li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+  padding: 4px 0 4px 18px;
+  position: relative;
+}
+
+.training-section ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #444;
+}
+
+.training-section ul ul {
+  margin-left: 20px;
+}
+
+.training-section ul ul li::before {
+  content: '○';
+  font-size: 11px;
+  top: 1px;
+}
+
+/* METHOD SECTION */
+.method-section {
+  padding: 80px 40px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.method-section .method-block {
+  margin-bottom: 36px;
+}
+
+.method-section .method-heading {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.method-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.method-section ul li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+  padding: 4px 0 4px 18px;
+  position: relative;
+}
+
+.method-section ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+}
+
+/* FOOTER */
+footer {
+  background: #3a3a3a;
+  padding: 48px 40px;
+  text-align: center;
+}
+
+footer p, footer a {
+  color: #ccc;
+  font-size: 13px;
+  line-height: 2;
+  text-decoration: none;
+  display: block;
+}
+
+footer a:hover {
+  color: #fff;
+}
